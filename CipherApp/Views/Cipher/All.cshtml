@@ -1,0 +1,40 @@
+﻿@model  IEnumerable<CipherApp.DataLayer.TableModule.Cipher>
+<head>
+    <link rel="stylesheet" href="~/Styles/Cipher.css">
+    <script src="~/MyScript/Cipher.js"></script>
+</head>
+
+
+<div class="navbar-left">
+    <div class="navigation" onmouseover="expandDocumentation()" onmouseout="shortDocumentation()">
+        @Html.ActionLink("Documentatii", "All", "Cipher")
+        <div class="docPlaceholder" id="docPlaceholder">
+            <div id="docElementsPlaceholder" class="docElementsPlaceholder">                
+                    
+                @using (Html.BeginForm("OpenCipherDoc", "Cipher", FormMethod.Post))
+                {
+                   foreach (var elem in Model)
+                   {
+                       @Html.AntiForgeryToken()
+                       @Html.ValidationSummary(true)
+                        //<div class="cipherPlaceholder@(elem.Id)" value="@elem.Title">
+                            @Html.HiddenFor(model => elem.Title)
+                        //</div>
+                       <input type="submit" value="@elem.Title" />
+                       
+
+                   }
+               }
+
+
+</div>
+        </div>
+    </div>
+    <div class="navigation" onmouseover="expandHome()" onmouseout="shortHome()">
+        @Html.ActionLink("Home", "Index", "Home")
+        <div class="homePlaceholder" id="homePlaceholder">
+            <div id="homeElementsPlaceholder" class="homeElementsPlaceholder">Ana<br />Are<br />Mere</div>
+        </div>
+    </div>
+    <div class="navigation"> @Html.ActionLink("About", "About", "Home") </div>
+</div>

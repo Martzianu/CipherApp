@@ -1,0 +1,54 @@
+﻿body {
+   background-color:rgba(1,1,1,0);
+}
+.titlePlaceholer{
+  position: relative;
+  margin-top: 90px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+
+}
+
+.descriptionPlaceholder{
+    color: white;
+  display: inline-block;
+  position: relative;
+  width: 38%;
+  left: 2%;
+  word-wrap: break-word;
+}
+.descriptionPlaceholder span{
+    font-size: 30px;
+}
+.algoritmPlaceholder{
+    color: white;
+  position: relative;
+  left: 12px;
+  width: 96%;
+  word-wrap: break-word;
+}
+.securityPlaceholder{
+  color: white;
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  width: 52%;
+  left: 9%;
+  word-wrap: break-word;
+}
+.linkPlaceholder{
+
+}
+.gifPlaceholder{
+  position: absolute;
+  right: 0px;
+  top: 149px;
+}
+span{
+    font-size:30px;
+}
+.contentPlaceholder{
+  width: 65%;
+    background-color: #4C4442;
+}

@@ -1,0 +1,31 @@
+﻿body{
+    padding:0!important;
+}
+
+html{ 
+  background: url(/Assets/pozaMareFundal.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.navbar-fixed-top{
+  top: 0;
+  z-index: 1030;
+  height: 90px;
+  background: rgba(177,177,233,.3);
+}
+
+.nameContainer {
+  width: 377px;
+  position: relative;
+  font-size: 40px;
+  top: -72px;
+  left: 40%;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+img:hover{
+    cursor:pointer;
+}
