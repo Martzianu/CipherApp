@@ -11,29 +11,31 @@
 }
 
 .descriptionPlaceholder{
-    color: white;
+  color: white;
   display: inline-block;
   position: relative;
-  width: 38%;
+  width: 25%;
   left: 2%;
   word-wrap: break-word;
+  top: -239px;
 }
 .descriptionPlaceholder span{
     font-size: 30px;
 }
 .algoritmPlaceholder{
-    color: white;
+  color: white;
   position: relative;
-  left: 12px;
-  width: 96%;
+  left: 71%;
+  top: -422px;
+  width: 28%;
   word-wrap: break-word;
 }
 .securityPlaceholder{
-  color: white;
+   color: white;
   display: inline-block;
   position: relative;
-  top: -8px;
-  width: 52%;
+  top: 0px;
+  width: 30%;
   left: 9%;
   word-wrap: break-word;
 }

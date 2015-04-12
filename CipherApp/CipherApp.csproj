@@ -162,6 +162,7 @@
     <Compile Include="Controllers\CipherController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataLayer\Cipher_Types.cs" />
     <Compile Include="DataLayer\ConnectDB.cs" />
     <Compile Include="DataLayer\TableModule\Cipher.cs" />
     <Compile Include="DataLayer\TableModule\CipherHandler.cs" />
@@ -189,6 +190,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="MyScript\Cipher.js" />
     <Content Include="MyScript\Layout.js" />
+    <Content Include="MyScript\PerCathegory.js" />
+    <Content Include="Styles\PerCathegories.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -243,6 +246,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Cipher\All.cshtml" />
     <Content Include="Views\Cipher\OpenCipherDoc.cshtml" />
+    <Content Include="Views\Cipher\PerCathegories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

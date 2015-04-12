@@ -9,7 +9,7 @@ namespace CipherApp.Controllers
 {
     public class CipherController : Controller
     {
-        public CipherTable table { get; set; }
+        public CipherTable table = new CipherTable();
         CipherHandler handler = new CipherHandler();
 
         public ActionResult All()
@@ -22,6 +22,12 @@ namespace CipherApp.Controllers
 
             return View(partialTable);
             
+        }
+
+        public ActionResult PerCathegories()
+        {
+            GetAllCiphers();
+            return View(table.getTable().ToList());
         }
 
         private void GetAllCiphers()

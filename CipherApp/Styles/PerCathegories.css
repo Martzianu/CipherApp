@@ -1,0 +1,56 @@
+﻿body {
+    margin:0px;
+    
+}
+.cathegoriButton{
+  width: 30px;
+  height: 40px;
+  color: white;
+  font-size: 28px;
+  position: relative;
+  margin-top: 25px;
+  left: 40%;
+}
+.cathegoriesPlaceholder{
+  position: relative;
+  margin-top: 144px;
+}
+.label{
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  background-color: black;
+  border: 6px red solid;
+}
+.label:hover{
+    cursor:pointer;
+    background-color: #620f0f;
+}
+.ciphersPlaceholder{
+  width: 228px;
+  height: 86px;
+  position: relative;
+  left: 17%;
+  top: -343px;
+  display: none;
+}
+.cipher{
+  font-size: 16px;
+  padding-top: 8px;
+  padding-left: 5px;
+}
+.cipher .label{
+    position:relative;
+}
+.closeButton{
+  width: 13px;
+  height: 20px;
+  background-color: yellow;
+  position: absolute;
+  left: 94%;
+  top: 1px;
+  padding-left: 2px;
+}
+.closeButton:hover{
+    cursor:pointer;
+}

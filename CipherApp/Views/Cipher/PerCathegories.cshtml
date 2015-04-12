@@ -1,0 +1,83 @@
+﻿@model  IEnumerable<CipherApp.DataLayer.TableModule.Cipher>
+@{
+    ViewBag.Title = "PerCathegories";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Styles/PerCathegories.css">
+    <script src="~/MyScript/PerCathegory.js"></script>
+</head>
+<body>
+    <div class="cathegoriesPlaceholder">
+        <div class="cathegoriButton"><div id="Monoalphabetic" class="label" onclick="displayDiv(this.id)">Monoalphabetic substitution</div></div>
+        <div class="cathegoriButton"><div id="Homophonic" class="label" onclick="displayDiv(this.id)">Homophonic substitution</div></div>
+        <div class="cathegoriButton"><div id="Polyalphabetic" class="label" onclick="displayDiv(this.id)">Polyalphabetic substitution</div></div>
+        <div class="cathegoriButton"><div id="Polygram" class="label" onclick="displayDiv(this.id)">Polygram substitution</div></div>
+        <div class="cathegoriButton"><div id="Transposition" class="label" onclick="displayDiv(this.id)">Transposition</div></div>
+        
+        <!-- In fiecare din astea pun cifrurile corespunzatoare tipului-->
+        <!-- Foreach cifru care are tipul specificat in clasa, fac un div care acuma e hardcodat-->
+        <div id="MonoalphabeticP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class=" cipher">
+
+                @foreach (var cifru in Model)
+                {
+                    if (cifru.Type.Contains("Monoalphabetic"))
+                    {
+                        <div class="label">@cifru.Title</div>
+                    }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+        <div id="HomophonicP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class=" cipher">
+                @foreach (var cifru in Model)
+                {
+                    if (cifru.Type.Contains("Homophonic"))
+                    {
+                        <div class="label">@cifru.Title</div>
+                    }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+        <div id="PolyalphabeticP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class=" cipher">
+                @foreach (var cifru in Model)
+                {
+                    if (cifru.Type.Contains("Polyalphabetic"))
+                    {
+                        <div class="label">@cifru.Title</div>
+                    }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+        <div id="PolygramP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class=" cipher">
+                @foreach (var cifru in Model)
+                {
+                    if (cifru.Type.Contains("Polygram"))
+                    {
+                        <div class="label">@cifru.Title</div>
+                    }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+        <div id="TranspositionP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class="cipher">
+                @foreach (var cifru in Model)
+                {
+                    if (cifru.Type.Contains("Transposition"))
+                    {
+                        <div class="label">@cifru.Title</div>
+                    }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+
+    </div>
+</body>
