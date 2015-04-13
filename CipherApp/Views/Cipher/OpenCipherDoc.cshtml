@@ -1,4 +1,4 @@
-﻿@model CipherApp.StringSorting.ListsForFrontEnd
+﻿@model CipherApp.DataLayer.TableModule.Cipher
 <head>
     <link rel="stylesheet" href="~/Styles/OneCipher.css" />
 </head>
@@ -6,24 +6,24 @@
 <body>
     <div class="contentPlaceholder">
         <div class="titlePlaceholer">
-            Caesar cipher
+            @Model.Title
         </div>
         <div class="descriptionPlaceholder">
             <span>Description</span><br />
-            The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet.  For example, with a left shift of 3, D would be replaced by A, E would become B, and so on
+            @Model.Description
 
         </div>
         <a class="linkPlaceholder" href="http://en.wikipedia.org/wiki/Caesar_cipher" /></a>
         <div class="securityPlaceholder">
             <span>Security</span><br />
-            The cipher can be broken using the same techniques as for a general simple substitution cipher, such as frequency analysis or pattern words.[13] While solving, it is likely that an attacker will quickly notice the regularity in the solution and deduce that a Caesar cipher is the specific algorithm employed.Another brute force approach is to match up the frequency distribution of the letters. By graphing the frequencies of letters in the ciphertext, and by knowing the expected distribution of those letters in the original language of the plaintext, a human can easily spot the value of the shift by looking at the displacement of particular features of the graph. This is known as frequency analysis.
+            @Model.Security
         </div>
         <div class="algoritmPlaceholder">
             <span>Algorithm</span><br />
-            The transformation can be represented by aligning two alphabets; the cipher alphabet is the plain alphabet rotated left or right by some number of positions.When encrypting, a person looks up each letter of the message in the "plain" line and writes down the corresponding letter in the "cipher" line. Deciphering is done in reverse, with a right shift of 3.
+            @Model.Algoritm
         </div>     
     </div>
     <div class="gifPlaceholder">
-        <img src="~/GIF/Caesar.gif" alt="empty" />
+        <img src="~/GIF/@Model.Gif" alt="empty" />
     </div>
 </body>

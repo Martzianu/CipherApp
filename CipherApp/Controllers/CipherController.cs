@@ -37,17 +37,19 @@ namespace CipherApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult OpenCipherDoc(Cipher cipherTitle)
+        public ActionResult OpenCipherDoc(string cipherTitle)
         {
             var bla = cipherTitle;
-            //Cipher cifru = new Cipher();
-            //foreach(var elem in table.getTable())
-             //   if(elem.Title == cipherTitle)
-             //   {
-           //        cifru = elem;
-            //    }
+            GetAllCiphers();
+            Cipher cifru = new Cipher();
+            foreach(var elem in table.getTable())
+                if(elem.Title == cipherTitle)
+                {
+                   cifru = elem;
+                   break;
+                }
 
-            return View(cipherTitle);
+            return View(cifru);
         }
         public ActionResult OpenCipherDoc()
         {

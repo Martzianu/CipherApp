@@ -26,6 +26,10 @@
     cursor:pointer;
     background-color: #620f0f;
 }
+input{
+
+}
+
 .ciphersPlaceholder{
   width: 228px;
   height: 86px;
