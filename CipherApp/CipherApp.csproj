@@ -158,8 +158,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\CipherController.cs" />
+    <Compile Include="Controllers\ContController.cs" />
+    <Compile Include="Controllers\ExerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DataLayer\Cipher_Types.cs" />
@@ -167,6 +169,9 @@
     <Compile Include="DataLayer\TableModule\Cipher.cs" />
     <Compile Include="DataLayer\TableModule\CipherHandler.cs" />
     <Compile Include="DataLayer\TableModule\CipherTable.cs" />
+    <Compile Include="DataLayer\TableModule\User.cs" />
+    <Compile Include="DataLayer\TableModule\UserHandler.cs" />
+    <Compile Include="DataLayer\TableModule\UserTable.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,6 +196,8 @@
     <Content Include="MyScript\Cipher.js" />
     <Content Include="MyScript\Layout.js" />
     <Content Include="MyScript\PerCathegory.js" />
+    <Content Include="Styles\Cont.css" />
+    <Content Include="Styles\Exercise.css" />
     <Content Include="Styles\PerCathegories.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -247,6 +254,10 @@
     <Content Include="Views\Cipher\All.cshtml" />
     <Content Include="Views\Cipher\OpenCipherDoc.cshtml" />
     <Content Include="Views\Cipher\PerCathegories.cshtml" />
+    <Content Include="Views\Cont\Index.cshtml" />
+    <Content Include="Views\Cont\Register.cshtml" />
+    <Content Include="Views\Exercise\AddExercise.cshtml" />
+    <Content Include="Views\Cont\Settings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

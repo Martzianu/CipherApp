@@ -18,13 +18,6 @@ namespace CipherApp.DataLayer.TableModule
         public List<string> Texts { get; set; }
         public string Gif { get; set; }
 
-        /*select Cifruri.id, 
-        titlu, 
-         * descriere,
-         * link,
-         * Securitate,
-         * Algoritm 
-         * TipCifruri from Cifruri inner join dbo.TipCifruri on TipCifruri.id = Cifruri.TipCifru*/
         public Cipher setCipher(SqlDataReader reader)
         {
             
@@ -36,7 +29,8 @@ namespace CipherApp.DataLayer.TableModule
                 Link = reader.GetString(3),
                 Security = reader.GetString(4),
                 Algoritm = reader.GetString(5),
-                Type = reader.GetString(6)
+                Type = reader.GetString(6),
+                Gif = reader.GetString(7)
             };
         }
     }

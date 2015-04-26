@@ -1,0 +1,10 @@
+﻿body {
+}
+
+.form-control{
+  position: absolute;
+  top: 31%;
+  left: 34%;
+  width: 32%;
+  height:auto;
+}

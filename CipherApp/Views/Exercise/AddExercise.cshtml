@@ -1,0 +1,32 @@
+﻿@model  IEnumerable<string>
+
+<head>
+    <link rel="stylesheet" href="~/Styles/Exercise.css">
+</head>
+<form class="form-control">
+    <div class="row">
+        <label for="cipher" class="col-md-4">Select Cipher:</label>
+        <select name="cipher" class="col-md-8">
+
+            @foreach (var item in Model)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+    <div class="row">
+        <label for="cerinta" class="col-md-4">Cerinta:</label>
+        <textarea rows="2" cols="5" name="cerinta" class="col-md-8"></textarea>
+    </div>
+    <div class="row">
+        <label for="extra" class="col-md-4">Suplimentar:</label>
+        <textarea rows="2" cols="5" name="extra" class="col-md-8"></textarea>
+    </div>
+    <div class="row">
+        <input type="submit" value="Add" name="Add" class="col-md-12"/>
+    </div>
+
+
+
+</form>
+

@@ -1,0 +1,51 @@
+﻿@model  IEnumerable<CipherApp.DataLayer.TableModule.User>
+<head>
+    <link rel="stylesheet" href="~/Styles/Cont.css" />
+</head>
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm("Register", "Cont", FormMethod.Post))
+{ 
+<div class="row form-control">
+    <div class="col-md-3 spacing">
+        <label for="username">Username:</label>   
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="text" class="txtlabel" name="_username" />
+    </div>
+
+    <div class="col-md-3  spacing">
+        <label for="password">Password:</label><br />
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="password" class="txtlabel" name="_password" />   
+    </div>
+
+    <div class="col-md-3 spacing">
+        <label for="email">Email:</label>
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="email" class="txtlabel" name="_email" />
+    </div>
+
+    <div class="col-md-3 spacing">
+        <label for="_isprof">Profesor:</label>
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="radio" class="txtlabel" name="_isprof"  value="true" checked />
+    </div>
+
+    <div class="col-md-3 spacing">
+        <label for="_isprof">Student:</label>
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="radio" class="txtlabel" name="_isprof" value="false" />
+    </div>
+
+
+   
+    <div class="col-md-3 spacing">
+        <input type="submit" name="Register" value="Register" />
+    </div>
+</div>
+}

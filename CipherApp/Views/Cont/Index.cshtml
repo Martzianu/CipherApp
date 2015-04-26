@@ -1,0 +1,29 @@
+﻿<head>
+    <link rel="stylesheet" href="~/Styles/Cont.css" />
+</head>
+<h1 class="esuat">@ViewBag.text</h1>
+
+@using (Html.BeginForm("Index", "Cont", FormMethod.Post))
+{
+<div class="row form-control">
+    <div class="col-md-3 spacing">
+        <label for="username">Username:</label>
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="text" class="txtlabel" name="_username" />
+    </div>
+    <div class="col-md-3  spacing">
+        <label for="password">Password:</label><br />
+    </div>
+    <div class="col-md-9 spacing">
+        <input type="password" class="txtlabel" name="_password" />
+
+    </div>
+   
+    @Html.ActionLink("Register","Register")
+    <div class="col-md-9 spacing"></div>
+    <div class="col-md-3 spacing">
+        <input type="submit" name="LogIn" value="LogIn" />
+    </div>
+</div>
+}

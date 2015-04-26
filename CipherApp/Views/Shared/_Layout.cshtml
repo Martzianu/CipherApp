@@ -19,10 +19,38 @@
     
     <div class="navbar-fixed-top">
         <div class="logoContainer"></div>
-            <img src="~/Assets/logo.png" alt="logo"><a>@Html.ActionLink(" ", "Cipher", "All")</a></img>
+        <a href="@Url.Action("All","Cipher")">          
+        <img src="~/Assets/logo.png" alt="logo" /></img>
+        </a>
+
+        </asp:HyperLink>
             <div class="nameContainer">
-                <div>Dragos Marcean</div>
+                @if (Constants.isProfLogged == true)
+                {
+                    @Html.ActionLink("Prof." + @Constants.name.ToUpper(), "Settings", "Cont")
+                }
+                else if (Constants.isProfLogged == false)
+                {
+                    @Html.ActionLink("Stud." + @Constants.name.ToUpper(), "Settings", "Cont")
+                }
+                else
+                {
+                <div>Welcome</div>
+                }
             </div>
+        <div class="right">
+            @if (Constants.isProfLogged == true)
+            {
+                @Html.ActionLink("+Exercise", "AddExercise", "Exercise")
+            }
+            else if (Constants.isProfLogged == false)
+            {
+                <div>@Constants.studentScore</div>
+            }
+            else {            
+            <div></div>
+            }
+        </div>
         
     </div>
 

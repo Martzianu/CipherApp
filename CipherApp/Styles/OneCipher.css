@@ -9,24 +9,29 @@
   font-size: 30px;
 
 }
+input{
+  background-color: black;
+  color: white;
+  border-color: red;
+}
 
 .descriptionPlaceholder{
   color: white;
   display: inline-block;
-  position: relative;
-  width: 25%;
+  position: absolute;
+  width: 33%;
   left: 2%;
   word-wrap: break-word;
-  top: -239px;
+  top: 39px;
 }
 .descriptionPlaceholder span{
     font-size: 30px;
 }
 .algoritmPlaceholder{
-  color: white;
-  position: relative;
+    color: white;
+  position: absolute;
   left: 71%;
-  top: -422px;
+  top: 42px;
   width: 28%;
   word-wrap: break-word;
 }
@@ -36,7 +41,7 @@
   position: relative;
   top: 0px;
   width: 30%;
-  left: 9%;
+  left: 38%;
   word-wrap: break-word;
 }
 .linkPlaceholder{
@@ -52,5 +57,7 @@ span{
 }
 .contentPlaceholder{
   width: 65%;
-    background-color: #4C4442;
+  position: relative;
+  height: 526px;
+
 }

@@ -84,3 +84,12 @@
     color:red;
     cursor:pointer;
 }
+input{
+  background-color: black;
+  color: white;
+  position: relative;
+  border-color: red;
+  width: auto;
+  font-size: 17px;
+  top: 36px;
+}

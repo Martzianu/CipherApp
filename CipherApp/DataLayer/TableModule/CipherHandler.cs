@@ -11,7 +11,7 @@ namespace CipherApp.DataLayer.TableModule
         {
             CipherTable table = new CipherTable();
             ConnectDB conDB = new ConnectDB();
-            string query = "select Cifruri.id, titlu, descriere,link,Securitate,Algoritm,dbo.TipCifruri.Tip from Cifruri inner join dbo.TipCifruri on TipCifruri.id = Cifruri.TipCifru";
+            string query = "select Cifruri.id, titlu, descriere,link,Securitate,Algoritm,dbo.TipCifruri.Tip,Gif from Cifruri inner join dbo.TipCifruri on TipCifruri.id = Cifruri.TipCifru";
             SqlConnection connection = conDB.connection;
         
             try{

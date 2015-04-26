@@ -1,0 +1,33 @@
+﻿body {
+}
+
+.signUpForm{
+      position: relative;
+  left: 43%;
+  top: 156px;
+  background-color: #cecece;
+  width: 13%;
+}
+.form-control{
+    position:absolute;
+    top:30%;
+    height:auto;
+    width:30%;
+    left:40%;
+}
+.txtlabel {
+    border-radius:4px;
+    width:100%;
+    border-left:0px;
+    border-right:0px;
+}
+.spacing {
+    padding-top:10px;
+}
+.esuat{
+   position: absolute;
+  top: 11%;
+  left: 46%;
+  color: red;
+  font-weight: bolder;
+}

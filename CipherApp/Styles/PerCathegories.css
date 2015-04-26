@@ -27,7 +27,9 @@
     background-color: #620f0f;
 }
 input{
-
+  background-color: black;
+  color: white;
+  border-color: red;
 }
 
 .ciphersPlaceholder{
