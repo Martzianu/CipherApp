@@ -1,0 +1,74 @@
+﻿@model IEnumerable<CipherApp.DataLayer.TableModule.Exercise>
+@{
+    ViewBag.Title = "ExercisesPage";
+}
+<head>
+    <link rel="stylesheet" href="~/Styles/Exercise.css" />
+    <script src="~/MyScript/Exercise.js"></script>
+</head>
+<div class="exercices">
+    @try{
+         foreach (var ex in Model)
+         {
+             <div class="exercisePlaceholder">
+
+                 <label for="cifru">Cifru</label>
+                 <div name="cifru" class="cifru wrap">@ex.Cifru</div>
+
+                 <label for="cerinta">Enunt</label>
+                 <div name ="cerinta" class="cerinta wrap">@ex.Enunt</div>
+
+                 <label for="detalii">Detalii</label>
+                 <div name="detalii" class="detalii wrap">@ex.Detalii</div>
+                 
+                 <label for="text">Text</label>
+                 <div name="text" class="text wrap">@ex.TextNormal</div>
+                 
+                 <label class="raspuns" for="raspuns">Raspuns</label>
+                 <div name="raspuns" class="raspuns wrap">@ex.TextCriptat</div>
+
+                 <label for="result">Rezultat</label>
+                 <input name="result" col="3" row="3" type="text" class="result"></input>
+                 <button class="submit" 
+                         onclick="verifyResult(this.previousElementSibling.value,
+                                               this.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML,
+                                               this.nextElementSibling,
+                                               this.nextElementSibling.nextElementSibling)">OK</button>               
+                 <img id="correct" alt="correct" src="~/Imagini/correct.jpg" width='30px' height="30px" class="raspunsImg" />
+                 <img id="gresit" alt="gresit" src="~/Imagini/gresit.gif" width='30px' height="30px" class="raspunsImg" />
+                 
+                 <div class="help2Placeholder" id="help1placeholder">
+                  @{
+                      Sabloane sabloane = new Sabloane(2,ex.TextNormal);
+                      var bla = sabloane.GetSabloane();
+                      foreach(var elem in bla)
+                      {
+                          <div class="aparitii"> @elem.text : @elem.aparitii </div>
+                          
+                      }
+                  }
+                 </div>
+                 <button class="help1" onclick="displayHelp1(this.previousElementSibling)">Help1</button>
+                 
+                 <div class="help1Placeholder" id="help2placeholder"></div>
+                 <button class="help2" onclick="displayHelp2(this.previousElementSibling)">Help2</button>
+
+                 <select class="cifre" id="cifre">
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                 </select>
+
+                 
+             </div>
+           
+
+         }
+    }
+    catch (Exception e)
+    {
+        <div class="noEx">Nu sunt exercitii pentru optiunea aleasa</div>
+    }
+</div>
+    

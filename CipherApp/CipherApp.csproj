@@ -169,6 +169,8 @@
     <Compile Include="DataLayer\TableModule\Cipher.cs" />
     <Compile Include="DataLayer\TableModule\CipherHandler.cs" />
     <Compile Include="DataLayer\TableModule\CipherTable.cs" />
+    <Compile Include="DataLayer\TableModule\Exercise.cs" />
+    <Compile Include="DataLayer\TableModule\ExerciseHandler.cs" />
     <Compile Include="DataLayer\TableModule\User.cs" />
     <Compile Include="DataLayer\TableModule\UserHandler.cs" />
     <Compile Include="DataLayer\TableModule\UserTable.cs" />
@@ -181,6 +183,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StringSorting\ListsForFrontEnd.cs" />
+    <Compile Include="StringSorting\Sabloane\AparitieSubstring.cs" />
+    <Compile Include="StringSorting\Sabloane\Sabloane.cs" />
     <Compile Include="StringSorting\SortString.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,7 +197,10 @@
     <Content Include="GIF\Caesar.gif" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagini\correct.jpg" />
+    <Content Include="Imagini\gresit.gif" />
     <Content Include="MyScript\Cipher.js" />
+    <Content Include="MyScript\Exercise.js" />
     <Content Include="MyScript\Layout.js" />
     <Content Include="MyScript\PerCathegory.js" />
     <Content Include="Styles\Cont.css" />
@@ -258,6 +265,7 @@
     <Content Include="Views\Cont\Register.cshtml" />
     <Content Include="Views\Exercise\AddExercise.cshtml" />
     <Content Include="Views\Cont\Settings.cshtml" />
+    <Content Include="Views\Exercise\ExercisesPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

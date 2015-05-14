@@ -22,8 +22,13 @@
             <span>Algorithm</span><br />
             @Model.Algoritm
         </div>     
+
     </div>
     <div class="gifPlaceholder">
         <img src="~/GIF/@Model.Gif" alt="empty" />
+    </div>
+
+    <div class="toExercise">
+        @Html.ActionLink("Exercitii", "ExercisesPage", "Exercise", new { cipher =@Model.Title  },null)
     </div>
 </body>

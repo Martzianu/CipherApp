@@ -3,9 +3,11 @@
 <head>
     <link rel="stylesheet" href="~/Styles/Exercise.css">
 </head>
-<form class="form-control">
+@using (Html.BeginForm("AddExercise", "Exercise", FormMethod.Post))
+{
+<div class="form-control">
     <div class="row">
-        <label for="cipher" class="col-md-4">Select Cipher:</label>
+        <label for="cipher" class="col-md-4 labelAdd">Select Cipher:</label>
         <select name="cipher" class="col-md-8">
 
             @foreach (var item in Model)
@@ -15,18 +17,56 @@
         </select>
     </div>
     <div class="row">
-        <label for="cerinta" class="col-md-4">Cerinta:</label>
+        <label for="cerinta" class="col-md-4 labelAdd">Cerinta:</label>
         <textarea rows="2" cols="5" name="cerinta" class="col-md-8"></textarea>
     </div>
     <div class="row">
-        <label for="extra" class="col-md-4">Suplimentar:</label>
-        <textarea rows="2" cols="5" name="extra" class="col-md-8"></textarea>
+        <label for="cerinta" class="col-md-4 labelAdd">Text:</label>
+        <textarea rows="2" cols="5" name="text" class="col-md-8"></textarea>
     </div>
     <div class="row">
-        <input type="submit" value="Add" name="Add" class="col-md-12"/>
+        <label for="extra" class="col-md-4 labelAdd">Detalii:</label>
+        <textarea rows="2" cols="5" name="detalii" class="col-md-8"></textarea>
+    </div>
+    <div class="row">
+        <input type="submit" value="Add" name="Add" class="col-md-3 addBtn"/>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 spacing">
+            <label for="privat" class="labelAdd">Privat:</label>
+        </div>
+        <div class="col-md-12 spacing">
+            <input type="radio" class="txtlabel" name="privat" value="true" checked />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 spacing">
+            <label for="public" class="labelAdd">Public:</label>
+        </div>
+        <div class="col-md-12 spacing">
+            <input type="radio" class="txtlabel" name="privat" value="false" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 spacing">
+            <label for="obligatoriu" class="labelAdd">Optional:</label>
+        </div>
+        <div class="col-md-12 spacing ">
+            <input type="radio" class="txtlabel" name="obligatoriu" value="false"  />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 spacing">
+            <label for="obligatoriu" class="labelAdd">Obligatoriu:</label>
+        </div>
+        <div class="col-md-12 spacing">
+            <input type="radio" class="txtlabel" name="obligatoriu" value="true" checked />
+        </div>
     </div>
 
 
 
-</form>
-
+</div>
+}

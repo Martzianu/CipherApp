@@ -7,6 +7,7 @@ namespace CipherApp.StringSorting
 {
     public class SortString
     {
+        // dictionar cheie valoare litera plus de cate ori apare
         Dictionary<string, int> letterValue = new Dictionary<string, int>();
         
         public void addLetter(string letter)

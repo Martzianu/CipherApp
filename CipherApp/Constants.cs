@@ -10,5 +10,6 @@ namespace CipherApp
         public static string name = "";
         public static bool? isProfLogged = null;
         public static int studentScore;
+        public static bool thereIsHomework = true;
     }
 }

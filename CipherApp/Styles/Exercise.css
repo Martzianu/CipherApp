@@ -8,3 +8,120 @@
   width: 32%;
   height:auto;
 }
+.addBtn{
+    margin-left:16px;
+}
+.row{
+    margin-left:0px!important;
+    margin-right:0px!important;
+}
+
+.exercices {
+    position: relative;
+    top: 91px;
+    margin-left: 52px;
+    margin-right: 52px;
+    height: auto;
+}
+.exercisePlaceholder {
+    left: 37%;
+    position: relative;
+    background-color: lightgray;
+    margin-bottom: 20px;
+    width: 485px;
+    padding: 0px 6px 7px 9px;
+}
+
+.cifru{
+
+}
+.cerinta{
+    
+}
+.detalii {
+
+}
+.text{
+  width: 212px;
+  color: White
+}
+.submit{
+    width: 40px;
+  height: 26px;
+  position: relative;
+  bottom: 0xp;
+}
+.result{
+
+}
+
+.wrap{
+    word-wrap: break-word;
+}
+label{
+    font-size:25px;
+    color:yellow;
+}
+.labelAdd{
+    font-size:14px !important;
+    color:black;
+}
+.help1{
+  position: relative;
+  width: 152px;
+}
+.help2{
+  position: relative;
+  float: right;
+  width: 152px;
+}
+.help1Placeholder{
+   width: 338px;
+  height: 193px;
+  background-color: black;
+  position: absolute;
+  float: left;
+  left: 485px;
+  display: none;
+  top: 0px;
+}
+.help2Placeholder {
+    width: 338px;
+    height: 90px;
+    background-color: black;
+    position: absolute;
+    float: left;
+    left: -362px;
+    display: none;
+    top: 0px;
+}
+.cifre{
+
+}
+.aparitii{
+    color:white;
+    font-size:20px;
+}
+.noEx {
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 34px;
+    position: relative;
+    width: 701px;
+    left: 27%;
+    background-color: rebeccapurple;
+    text-align: center;
+    border-radius: 24px;
+    padding-left: 9px;
+}
+.raspunsImg {
+    position: relative;
+    float: right;
+    bottom: -3px;
+    left: -66px;
+    margin-left: 10px;
+    display:none;
+}
+.raspuns{
+    display:none;
+}

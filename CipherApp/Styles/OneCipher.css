@@ -61,3 +61,25 @@ span{
   height: 526px;
 
 }
+.toExercise{
+  background-color: black;
+  width: 130px;
+  font-size: 32px;
+  position: relative;
+  float: right;
+  border-radius: 18px;
+  padding: 5px 9px 5px 9px;
+    top: -61px;
+}
+.toExercise:hover{
+    background-color:red;
+    cursor:pointer;
+}
+.toExercise a{
+    color:red!important;
+}
+.toExercise a:hover{
+    text-decoration:none;
+    color:black!important;
+
+}

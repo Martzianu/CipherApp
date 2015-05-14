@@ -27,10 +27,23 @@
   top: -38px;
   transition:width 0.5s;
 }
-.homePlaceholder{
+.homework a{
+    color: rgb(5, 252, 33)!important;
+  
+}
+.temePlaceholder{
   width: 0%;
   height: 118px;
   background: rgba(177,177,233,0.3);
+  position: absolute;
+  left: 131px;
+  top: -38px;
+  transition:width 0.5s;
+}
+.temePlaceholderActivated{
+  width: 0%;
+  height: 118px;
+  background: rgba(130, 246, 0, 0.30);
   position: absolute;
   left: 131px;
   top: -38px;
