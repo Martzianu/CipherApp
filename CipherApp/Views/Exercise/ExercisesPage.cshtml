@@ -5,62 +5,74 @@
 <head>
     <link rel="stylesheet" href="~/Styles/Exercise.css" />
     <script src="~/MyScript/Exercise.js"></script>
+    <script type="text/javascript" src="/assets/script/canvasjs.min.js" defer></script>
 </head>
+
 <div class="exercices">
     @try{
          foreach (var ex in Model)
          {
              <div class="exercisePlaceholder">
 
-                 <label for="cifru">Cifru</label>
+                 <label for="cifru">Cifru: </label>
                  <div name="cifru" class="cifru wrap">@ex.Cifru</div>
-
-                 <label for="cerinta">Enunt</label>
+                 <br />
+                 <label for="cerinta">Enunt: </label>
                  <div name ="cerinta" class="cerinta wrap">@ex.Enunt</div>
-
-                 <label for="detalii">Detalii</label>
+                 <br />
+                 <label for="detalii">Detalii: </label>
                  <div name="detalii" class="detalii wrap">@ex.Detalii</div>
-                 
-                 <label for="text">Text</label>
+                 <br />
+                 <label for="text">Text: </label>
                  <div name="text" class="text wrap">@ex.TextNormal</div>
-                 
+                 <br />
                  <label class="raspuns" for="raspuns">Raspuns</label>
                  <div name="raspuns" class="raspuns wrap">@ex.TextCriptat</div>
 
-                 <label for="result">Rezultat</label>
+                 <label for="result">Rezultat: </label>
                  <input name="result" col="3" row="3" type="text" class="result"></input>
+                 <br />
                  <button class="submit" 
-                         onclick="verifyResult(this.previousElementSibling.value,
-                                               this.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML,
+                         onclick="verifyResult(this.previousElementSibling.previousElementSibling.value,
+                                               this.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML,
                                                this.nextElementSibling,
                                                this.nextElementSibling.nextElementSibling)">OK</button>               
-                 <img id="correct" alt="correct" src="~/Imagini/correct.jpg" width='30px' height="30px" class="raspunsImg" />
-                 <img id="gresit" alt="gresit" src="~/Imagini/gresit.gif" width='30px' height="30px" class="raspunsImg" />
                  
-                 <div class="help2Placeholder" id="help1placeholder">
-                  @{
-                      Sabloane sabloane = new Sabloane(2,ex.TextNormal);
-                      var bla = sabloane.GetSabloane();
-                      foreach(var elem in bla)
-                      {
-                          <div class="aparitii"> @elem.text : @elem.aparitii </div>
-                          
-                      }
-                  }
+                 <img id="correct" alt="correct" src="~/Imagini/correct.jpg" width='60px' height="60px" class="raspunsImgCorrect" />
+                 <img id="gresit" alt="gresit" src="~/Imagini/gresit.gif" width='60px' height="60px" class="raspunsImgGresit" />
+                 <div class="helpArea">
+                   
+                   @using (Html.BeginForm("ShowSubstring", "Exercise", FormMethod.Post)) { 
+                     <button class="help1">Substrings</button>
+                     <input class="help1Placeholder" name="text" value=@ex.TextNormal></input>
+                   
+                         
+                    
+
+                     <select name="number" class="cifre" id="cifre">
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                         <option>5</option>
+                     </select>
+                   }
+                    @using (Html.BeginForm("ShowChart", "Exercise", FormMethod.Post))
+                    {
+                        <input class="help1Placeholder" name="text" value=@ex.TextNormal></input>
+                        <button class="help2">Letter frequency</button>
+                    }
+                     <span class="explicatiiHelpSubstring wrap">
+                         Selectati un numar care reprezinta lungimea de substrings
+                         si apasati "Substrings" pentru a afisa cele mai des intalnite
+                         substring-uri de acea dimensiune
+                     </span>
+
+                     <span class="explicatiiHelpLitere wrap">
+                         Apasati tasta "Letter frequency" pentru a va afisa frecventa
+                         de aparitie a literelor din text
+                     </span>
                  </div>
-                 <button class="help1" onclick="displayHelp1(this.previousElementSibling)">Help1</button>
-                 
-                 <div class="help1Placeholder" id="help2placeholder"></div>
-                 <button class="help2" onclick="displayHelp2(this.previousElementSibling)">Help2</button>
 
-                 <select class="cifre" id="cifre">
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
-                 </select>
-
-                 
              </div>
            
 

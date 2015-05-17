@@ -1,0 +1,33 @@
+﻿@model CipherApp.ListsForFrontEnd
+ <head>
+    <link rel="stylesheet" href="~/Styles/Exercise.css" />
+</head>
+<div class="AllCharts">
+    <div class="yourChartPlaceholder">
+        <h1>This is your chart</h1>
+        <div class="your chart">
+            @for (int item = 0; item < Model.Keys.Count; item++)
+            {
+                <div class="freqBar">
+                <span>@Model.Values[item]</span>
+                <div style="width:@(20+ (int)Model.Values[item]).@((Model.Values[item] - (int)Model.Values[item]).ToString().Substring(2, 2))%" class="bar"> @Model.Keys[item]</div>
+                <br />
+                </div>
+            }
+        </div>
+    </div>
+    <div class="generalChartPlaceholder">
+    <h1>This is the average frequency of letter in the English language</h1>
+    <div class="general chart">
+        @for (int item = 0; item < Model.Alphabet.Count; item++)
+        {
+            <div class="freqBar">
+            <span>@Model.AlphabetFrequency[item]</span>
+            <div style="width:@( 20+(int)Model.AlphabetFrequency[item]).@((Model.AlphabetFrequency[item] - (int)Model.AlphabetFrequency[item]).ToString().Substring(2,2))%" class="bar"> @Model.Alphabet[item]</div>
+            <br />
+            </div>
+        }
+    </div>
+</div>
+</div>
+

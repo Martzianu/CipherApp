@@ -36,12 +36,19 @@
                 else
                 {
                 <div>Welcome</div>
+                @Html.ActionLink("Login","Index", "Cont");
                 }
             </div>
         <div class="right">
             @if (Constants.isProfLogged == true)
             {
                 @Html.ActionLink("+Exercise", "AddExercise", "Exercise")
+            }
+            @if (Constants.isProfLogged == true)
+            {
+                <div class="download">
+                    @Html.ActionLink("Download", "Download", "Exercise")
+                </div>
             }
             else if (Constants.isProfLogged == false)
             {

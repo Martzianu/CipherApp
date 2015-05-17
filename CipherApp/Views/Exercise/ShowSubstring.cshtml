@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CipherApp.AparitieSubstring>
+<head>
+    <link rel="stylesheet" href="~/Styles/Exercise.css" />
+</head>
+ @foreach (var ex in Model)
+ {
+    <div class="aparitii">@ex.text : @ex.aparitii</div>
+     <br />
+ }
+

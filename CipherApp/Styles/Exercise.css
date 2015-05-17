@@ -24,7 +24,6 @@
     height: auto;
 }
 .exercisePlaceholder {
-    left: 37%;
     position: relative;
     background-color: lightgray;
     margin-bottom: 20px;
@@ -33,26 +32,33 @@
 }
 
 .cifru{
-
+    font-size:30px;
+    display:inline-block;
 }
 .cerinta{
-    
+    font-size:15px;
+    display:inline-block;
 }
 .detalii {
-
+    font-size:15px;
+    display:inline-block;
 }
 .text{
-  width: 212px;
-  color: White
+  width: 389px;
+  color: black;
+  left: 68px;
+  bottom: 34px;
+  position: relative;
+  font-family: bizon;
 }
 .submit{
-    width: 40px;
+  width: 100%;
   height: 26px;
   position: relative;
   bottom: 0xp;
 }
 .result{
-
+   width: 100%;
 }
 
 .wrap{
@@ -67,23 +73,26 @@ label{
     color:black;
 }
 .help1{
-  position: relative;
-  width: 152px;
-}
-.help2{
-  position: relative;
-  float: right;
-  width: 152px;
-}
-.help1Placeholder{
-   width: 338px;
-  height: 193px;
-  background-color: black;
   position: absolute;
-  float: left;
-  left: 485px;
-  display: none;
-  top: 0px;
+  width: 152px;
+  bottom: 130px;
+}
+.help2 {
+    position: absolute;
+    float: right;
+    width: 152px;
+    right: 317px;
+    bottom: 33px;
+}
+.help1Placeholder {
+    width: 456px;
+    height: 345px;
+    background-color: black;
+    position: absolute;
+    float: left;
+    left: 824px;
+    display: none;
+  top: -275px;
 }
 .help2Placeholder {
     width: 338px;
@@ -91,16 +100,21 @@ label{
     background-color: black;
     position: absolute;
     float: left;
-    left: -362px;
+      left: 485px;
     display: none;
-    top: 0px;
+     top: -275px;
 }
-.cifre{
-
+.cifre {
+    position: absolute;
+    bottom: 133px;
+    left: 159px;
 }
 .aparitii{
-    color:white;
-    font-size:20px;
+   color: white;
+  font-size: 41px;
+  position: relative;
+  left: 15px;
+  top: 92px;
 }
 .noEx {
     color: lightgreen;
@@ -114,14 +128,110 @@ label{
     border-radius: 24px;
     padding-left: 9px;
 }
-.raspunsImg {
-    position: relative;
-    float: right;
-    bottom: -3px;
-    left: -66px;
-    margin-left: 10px;
-    display:none;
+.raspunsImgGresit {
+    position: absolute;
+    bottom: 256px;
+    display: none;
+    right: 23px;
+    right: -160px;
+}
+.raspunsImgCorrect{
+    position: absolute;
+    bottom: 256px;
+    display: none;
+    right: -90px;
 }
 .raspuns{
     display:none;
+}
+
+.explicatiiHelpSubstring {
+    position: absolute;
+    left: 202px;
+    width: 277px;
+    bottom: 78px;
+}
+.explicatiiHelpLitere {
+    position: absolute;
+    bottom: 2px;
+    left: 199px;
+}
+.helpArea{
+  position: relative;
+  bottom: -4px;
+  width: 470px;
+  height: 177px;
+
+}
+.yourChartPlaceholder {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+.yourChartPlaceholder h1 {
+        color: white;
+        position: relative;
+        top: 73px;
+        left: 15px;
+        width: 318px;
+    }
+.your{
+
+}
+
+.generalChartPlaceholder{
+  position: relative;
+  float: right;
+  top: 42px;
+  left: 0px;
+}
+    .generalChartPlaceholder h1 {
+        color: white;
+        font-size: 22px;
+        top: 41px;
+        position: relative;
+        left: -61px;
+    }
+.general{
+  top: 49px !important;
+  left: 0px !important;
+}
+
+.chart {
+   position: relative;
+  float: left;
+  width: 88%;
+  left: 62px;
+  top: 76px;
+}
+.bar {
+    color: white;
+    font-size: 15px;
+    height: 20px;
+    background-color: red;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-weight: bolder;
+}
+.generalChart{
+
+}
+.AllCharts{
+    display:inline-block;
+      width: 100%;
+}
+.general span {
+    position: absolute;
+    left: -58px;
+    color: white;
+    font-weight: bolder;
+}
+.your span{
+     position: absolute;
+    left: -58px;
+    color: white;
+    font-weight: bolder;
+}
+.freqBar{
+
 }

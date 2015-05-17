@@ -266,6 +266,9 @@
     <Content Include="Views\Exercise\AddExercise.cshtml" />
     <Content Include="Views\Cont\Settings.cshtml" />
     <Content Include="Views\Exercise\ExercisesPage.cshtml" />
+    <Content Include="Views\Exercise\ShowSubstring.cshtml" />
+    <Content Include="Views\Exercise\ShowChart.cshtml" />
+    <Content Include="Views\Exercise\Download.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

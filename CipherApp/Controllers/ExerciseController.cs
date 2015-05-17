@@ -1,5 +1,5 @@
 ﻿using CipherApp.DataLayer.TableModule;
-using CipherApp.StringSorting;
+using CipherApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +55,34 @@ namespace CipherApp.Controllers
             ExList = handler.GetMandatoryExercices(true);
             else ExList = handler.GetExercicesForCipher(cipher);
             return View(ExList);
+        }
+        [HttpPost]
+        public ActionResult ShowSubstring(string text, int number)
+        {
+            Sabloane sabloane = new Sabloane(number,text);
+            var sabloaneList = sabloane.GetSabloane();
+           // foreach (var elem in bla)
+            return View(sabloaneList);
+        }
+        [HttpPost]
+        public ActionResult ShowChart(string text)
+        {
+            text = text.ToUpper();
+            SortString sort = new SortString(text);
+            for (int i = 0; i < text.Length; i++)
+            {
+                sort.addLetter(text[i]);
+            }
+            var bla = sort.getDictionary();
+            ListsForFrontEnd lists = new ListsForFrontEnd();
+            lists.Keys = bla.Keys.ToList();
+            lists.Values = bla.Values.ToList();
+           
+            return View(lists);
+        }
+        public ActionResult Download()
+        {
+            return View();
         }
 
        

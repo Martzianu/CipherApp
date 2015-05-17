@@ -13,6 +13,7 @@ function verifyResult(res,text,correct,gresit){
     else {
         gresitF(gresit, correct);
     }
+    
 }
 function correctF(correct, gresit) {
     correct.style.display = "block";
@@ -20,5 +21,5 @@ function correctF(correct, gresit) {
 }
 function gresitF(gresit, correct) {
     gresit.style.display = "block";
-    correct.style.display = "hidden";
+    correct.style.display = "none";
 }

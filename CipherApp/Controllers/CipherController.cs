@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CipherApp.DataLayer.TableModule;
-using CipherApp.StringSorting;
+using CipherApp;
 namespace CipherApp.Controllers
 {
     public class CipherController : Controller
@@ -52,18 +52,8 @@ namespace CipherApp.Controllers
             return View(cifru);
         }
         public ActionResult OpenCipherDoc()
-        {
-            string text = "AHLQFJDBGKSBSKJHGHALKJBLKLASDLGJSLKJJFJEPEPRGNNSKS";
-            SortString sort = new SortString();
-            for (int i = 0; i < text.Length; i++)
-            {
-                sort.addLetter(text[i].ToString());
-            }
-            var bla = sort.getDictionary();
-            ListsForFrontEnd lists = new ListsForFrontEnd();
-            lists.Keys = bla.Keys.ToList();
-            lists.Values = bla.Values.ToList();
-            return View(lists);
+        {         
+            return View();
         }
     }
 }
