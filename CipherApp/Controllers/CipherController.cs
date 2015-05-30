@@ -16,9 +16,9 @@ namespace CipherApp.Controllers
         {
             List<Cipher> partialTable = new List<Cipher>();
             GetAllCiphers();
-            partialTable.Add(table.getTable().ElementAt(0));
-            partialTable.Add(table.getTable().ElementAt(1));
-            partialTable.Add(table.getTable().ElementAt(2));
+            partialTable.Add(table.getTable().ElementAt(table.getTable().Count-1));
+            partialTable.Add(table.getTable().ElementAt(table.getTable().Count - 2));
+            partialTable.Add(table.getTable().ElementAt(table.getTable().Count - 3));
 
             return View(partialTable);
             

@@ -195,6 +195,11 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GIF\Caesar.gif" />
+    <Content Include="GIF\CBC.gif" />
+    <Content Include="GIF\CFB.gif" />
+    <Content Include="GIF\CTR.gif" />
+    <Content Include="GIF\ECB.gif" />
+    <Content Include="GIF\OFB.gif" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Imagini\correct.jpg" />

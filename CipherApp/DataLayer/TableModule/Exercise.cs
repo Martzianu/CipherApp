@@ -14,5 +14,6 @@ namespace CipherApp.DataLayer.TableModule
         public string TextNormal{ get; set; }
         public string TextCriptat { get; set; }
         public bool Obligatoriu { get; set; }
+        public string Prof { get; set; }
     }
 }

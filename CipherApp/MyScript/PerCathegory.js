@@ -12,4 +12,5 @@ function closeAll()
     document.getElementById('PolyalphabeticP').style.display = "none";
     document.getElementById('HomophonicP').style.display = "none";
     document.getElementById('MonoalphabeticP').style.display = "none";
+    document.getElementById('RotorP').style.display = "none";
 }

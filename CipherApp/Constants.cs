@@ -11,5 +11,7 @@ namespace CipherApp
         public static bool? isProfLogged = null;
         public static int studentScore;
         public static bool thereIsHomework = true;
+
+        public static List<CipherApp.DataLayer.TableModule.Exercise> exercitiiSel = new List<DataLayer.TableModule.Exercise>();
     }
 }

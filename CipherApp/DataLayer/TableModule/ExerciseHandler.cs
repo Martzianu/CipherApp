@@ -8,10 +8,48 @@ namespace CipherApp.DataLayer.TableModule
 {
     public class ExerciseHandler
     {
+        public List<Exercise> GetExerciseToDownload()
+        {
+            List<Exercise> exercises = new List<Exercise>();
+            ConnectDB conDB = new ConnectDB();
+            string query = "Select * from dbo.Exercitii where prof = @prof or prof = ''";
+            SqlConnection connection = conDB.connection;
+            try
+            {
+                connection.Open();
+                using (var comm = new SqlCommand(query, connection))
+                {
+                    comm.Parameters.AddWithValue("@prof", Constants.name);
+                    var reader = comm.ExecuteReader();
+                    if (reader.HasRows)
+                        while (reader.Read())
+                        {
+                            Exercise ex = new Exercise();
+                            ex.Enunt = reader[7].ToString();
+                            ex.Privat = Boolean.Parse(reader[1].ToString());
+                            ex.Detalii = reader[2].ToString();
+                            ex.Cifru = reader[3].ToString();
+                            ex.TextNormal = reader[4].ToString();
+                            ex.TextCriptat = reader[5].ToString();
+                            ex.Obligatoriu = Boolean.Parse(reader[6].ToString());
+                            ex.Prof = reader[8].ToString();
+                            exercises.Add(ex);
+                        }
+                    else return null;
+                }
+                return exercises;
+            }
+            catch (Exception e)
+            {
+                var msg = e.Message;
+                return null;
+            }
+        }
+
         public bool AddExercise(Exercise ex)
         {
             ConnectDB conDB = new ConnectDB();
-            string query = "Insert into dbo.Exercitii values(@privat, @detalii,@cifru,@textnormal, @textcriptat, @obligatoriu,@enunt)";
+            string query = "Insert into dbo.Exercitii values(@privat, @detalii,@cifru,@textnormal, @textcriptat, @obligatoriu,@enunt,@prof)";
             SqlConnection connection = conDB.connection;          
                 try
                 {
@@ -33,6 +71,7 @@ namespace CipherApp.DataLayer.TableModule
                         comm.Parameters.AddWithValue("@textcriptat", ex.TextCriptat);
                         comm.Parameters.AddWithValue("@cifru", ex.Cifru);
                         comm.Parameters.AddWithValue("@obligatoriu", ex.Obligatoriu);
+                        comm.Parameters.AddWithValue("@prof", ex.Prof);
 
                         comm.ExecuteNonQuery();
                        

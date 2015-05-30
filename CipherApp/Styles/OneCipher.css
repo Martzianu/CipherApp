@@ -16,33 +16,42 @@ input{
 }
 
 .descriptionPlaceholder{
-  color: white;
+  color: red;
   display: inline-block;
   position: absolute;
   width: 33%;
-  left: 2%;
+  left: 1%;
   word-wrap: break-word;
   top: 39px;
+  padding:7px;
+  background-color:black;
+    border-radius: 21px;
 }
 .descriptionPlaceholder span{
     font-size: 30px;
 }
-.algoritmPlaceholder{
-    color: white;
-  position: absolute;
-  left: 71%;
-  top: 42px;
-  width: 28%;
-  word-wrap: break-word;
+.algoritmPlaceholder {
+    color: red;
+    position: absolute;
+    left: 67%;
+    top: 42px;
+    width: 28%;
+    word-wrap: break-word;
+    padding: 7px;
+    background-color: black;
+      border-radius: 21px;
 }
-.securityPlaceholder{
-   color: white;
-  display: inline-block;
-  position: relative;
-  top: 0px;
-  width: 30%;
-  left: 38%;
-  word-wrap: break-word;
+.securityPlaceholder {
+    color: red;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    width: 30%;
+    left: 35%;
+    word-wrap: break-word;
+    padding: 7px;
+    background-color: black;
+    border-radius: 21px;
 }
 .linkPlaceholder{
 

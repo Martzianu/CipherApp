@@ -20,3 +20,8 @@ function cipherPage(titlu) {
     alert(asd);
    // window.location.href = '@Url.Content("~/{Home}/{Test}/{params}")';
 }
+
+function verifyRotor(text) {
+    if(text == 'Rotor' || text == 'Enigma' || text == 'Lorenz cipher')
+        document.getElementById('algoritm').innerHTML = 'Mechanism'
+}

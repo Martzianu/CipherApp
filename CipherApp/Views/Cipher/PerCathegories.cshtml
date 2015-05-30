@@ -14,7 +14,9 @@
         <div class="cathegoriButton"><div id="Polyalphabetic" class="label" onclick="displayDiv(this.id)">Polyalphabetic substitution</div></div>
         <div class="cathegoriButton"><div id="Polygram" class="label" onclick="displayDiv(this.id)">Polygram substitution</div></div>
         <div class="cathegoriButton"><div id="Transposition" class="label" onclick="displayDiv(this.id)">Transposition</div></div>
-        
+        <div class="cathegoriButton"><div id="Rotor" class="label" onclick="displayDiv(this.id)">Rotor</div></div>
+        <div class="cathegoriButton"><div id="Product" class="label" onclick="displayDiv(this.id)">Product</div></div>
+
         <!-- In fiecare din astea pun cifrurile corespunzatoare tipului-->
         <!-- Foreach cifru care are tipul specificat in clasa, fac un div care acuma e hardcodat-->
         <div id="MonoalphabeticP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
@@ -93,6 +95,40 @@
                     }
 
                 }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+        <div id="RotorP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class="cipher">
+                @using (Html.BeginForm("OpenCipherDoc", "Cipher", FormMethod.Post))
+                {
+                    foreach (var cifru in Model)
+                    {
+                        if (cifru.Type.Contains("Rotor"))
+                        {
+
+                            <input type="submit" value="@cifru.Title" name="cipherTitle" />
+                        }
+
+                    }
+                }
+            </div>
+            <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->
+        </div>
+        <div id="ProductP" class="ciphersPlaceholder" onclick="closeDiv(this.id)">
+            <div class="cipher">
+                @using (Html.BeginForm("OpenCipherDoc", "Cipher", FormMethod.Post))
+                {
+                    foreach (var cifru in Model)
+                    {
+                        if (cifru.Type.Contains("Product"))
+                        {
+
+                            <input type="submit" value="@cifru.Title" name="cipherTitle" />
+                        }
+
+                    }
                 }
             </div>
             <div class="closeButton" onclick="closeDiv()">X</div> <!--asta va fi pus la toti-->

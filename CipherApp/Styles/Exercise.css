@@ -25,23 +25,28 @@
 }
 .exercisePlaceholder {
     position: relative;
-    background-color: lightgray;
+    background-color: black;
     margin-bottom: 20px;
     width: 485px;
     padding: 0px 6px 7px 9px;
+    border-radius: 19px;
+      left: 31%;
 }
 
 .cifru{
     font-size:30px;
     display:inline-block;
+    color:red;
 }
 .cerinta{
     font-size:15px;
     display:inline-block;
+    color:red;
 }
 .detalii {
     font-size:15px;
     display:inline-block;
+    color:red;
 }
 .text{
   width: 389px;
@@ -50,6 +55,7 @@
   bottom: 34px;
   position: relative;
   font-family: bizon;
+  color:red;
 }
 .submit{
   width: 100%;
@@ -92,7 +98,7 @@ label{
     float: left;
     left: 824px;
     display: none;
-  top: -275px;
+    top: -275px;
 }
 .help2Placeholder {
     width: 338px;
@@ -117,13 +123,13 @@ label{
   top: 92px;
 }
 .noEx {
-    color: lightgreen;
+    color: red;
     font-weight: bold;
     font-size: 34px;
     position: relative;
     width: 701px;
     left: 27%;
-    background-color: rebeccapurple;
+    background-color: black;
     text-align: center;
     border-radius: 24px;
     padding-left: 9px;
@@ -150,11 +156,13 @@ label{
     left: 202px;
     width: 277px;
     bottom: 78px;
+    color:red;
 }
 .explicatiiHelpLitere {
     position: absolute;
     bottom: 2px;
     left: 199px;
+    color:red;
 }
 .helpArea{
   position: relative;
@@ -234,4 +242,20 @@ label{
 }
 .freqBar{
 
+}
+.raspunsVisibil {
+    display: block;
+    left: 124px;
+    width: 343px;
+}
+.onHover:hover{
+    background-color:lightgreen;
+    cursor:pointer;
+}
+.downloadButton {
+    width: 300px;
+    height: 40px;
+    position: relative;
+    float: left;
+    left: 40%;
 }

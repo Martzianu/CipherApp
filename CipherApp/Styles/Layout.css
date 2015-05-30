@@ -32,7 +32,7 @@ img:hover{
     cursor:pointer;
 }
 a{
-    color: #a82354 !important;
+    color: red !important;
 }
 .right{
   width: 377px;
@@ -44,14 +44,18 @@ a{
   font-weight: bolder;
   text-align: center;
 }
-.download{
+.download {
     width: 377px;
-  position: relative;
-  font-size: 40px;
-  top: -58px;
-  left: -59%;
-  color: white;
-  font-weight: bolder;
-  text-align: center;
+    position: relative;
+    font-size: 40px;
+    top: -58px;
+    left: -229%;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+.navbar-fixed-top {
+    background-color: black;
+    border-radius: 70px !important;
 }
 
