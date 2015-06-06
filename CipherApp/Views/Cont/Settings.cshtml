@@ -1,34 +1,43 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript">
-window.onload = function () {
-	var chart = new CanvasJS.Chart("chartContainer", {
-		theme: "theme2",//theme1
-		title:{
-			text: "Basic Column Chart - CanvasJS"
-		},
-		animationEnabled: false,   // change to true
-		data: [
-		{
-			// Change type to "bar", "splineArea", "area", "spline", "pie",etc.
-			type: "column",
-			dataPoints: [
-				{ label: "apple",  y: 10  },
-				{ label: "orange", y: 15  },
-				{ label: "banana", y: 25  },
-				{ label: "mango",  y: 30  },
-				{ label: "grape",  y: 28  }
-			]
-		}
-		]
-	});
-	chart.render();
-}
-    </script>
-    <script type="text/javascript" src="/assets/script/canvasjs.min.js" defer></script>
+  
+    <link rel="stylesheet" href="~/Styles/Settings.css">
+    <script src="~/MyScript/Settings.js"></script>
+
 </head>
 <body>
-    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <div class="mesaj">@ViewBag.text</div>
+@using (Html.BeginForm("Settings", "Cont", FormMethod.Post)) 
+{ 
+    <div class="settingsPlaceholder">
+        <label for="currentMail">Current mail</label> <br />
+        <input type="text" name="currentMail" class="currentMail" />
+        <br />
+        <label for="newMail">New mail</label><br />
+        <input id="newMail" type="text" name="newMail" class="newMail" onkeyup="checkMail(document.getElementById('newMail').value,document.getElementById('retypeMail').value)" />
+        <br />
+        <label for="retypeMail">Retype mail</label><br />
+        <input id="retypeMail" type="text" name="retypeMail" class="retypeMail" onkeyup="checkMail(document.getElementById('newMail').value,document.getElementById('retypeMail').value)"/><span id="wrongMail" class="wrongMail">Mails do not match</span>
+        <br />
+        <input type="submit" class="changeMail" name="action" value="ChangeMail" >
+        <br />
+        <br />
+
+        <label for="currentPass">Current pass</label><br />
+        <input type="password" name="currentPass" class="currentPass" />
+        <br />
+        <label for="newPass">New password</label><br />
+        <input id="newPass" type="password" name="newPass" class="newPass" />
+        <br />
+        <label for="retypePass">Retype password</label><br />
+        <input id="retypePass" type="password" name="retypePass" class="retypePass" /><span id="wrongMail" class="wrongPass">Pass do not match</span>
+        <br />
+        <input type="submit" class="changePass" name="action" value="ChangePass" >
+        <br />
+        <br />
+        <input type="submit" class="logout" name="action" value="Logout">
+        </div>
+}
 </body>
 </html>

@@ -1,0 +1,62 @@
+﻿body {
+}
+
+.settingsPlaceholder{
+  width: 394px;
+  height: auto;
+  position: relative;
+  left: 42%;
+  top: 100px;
+  background-color: black;
+  border-radius: 37px;
+  padding: 16px;
+}
+.changeMail {
+      width: 174px;
+      border-radius:0px;
+}
+.changePass{
+      width: 174px;
+       border-radius:0px;
+}
+.logout {
+    width: 100%;
+    border-radius: 0px;
+    float: right;
+    position: relative;
+    top: -16px;
+    left: -37px;
+}
+label{
+    color:red;
+}
+input{
+    width:100%;
+}
+password{
+    width:100%;
+}
+.wrongMail {
+    position: relative;
+    color: white;
+    font-size: 9px;
+    top: 0px;
+    right: -8px;
+    display: none;
+}
+.wrongPass {
+    position: relative;
+    color: white;
+    font-size: 9px;
+    top: 0px;
+    right: -8px;
+    display: none;
+}
+.mesaj {
+    position: relative;
+    color: red;
+    font-size: 18px;
+    font-family: Bizon;
+    top: 94px;
+    
+}

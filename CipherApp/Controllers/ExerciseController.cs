@@ -112,7 +112,6 @@ namespace CipherApp.Controllers
         {
             XmlDocument doc = new XmlDocument();
 
-           
             XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
             XmlElement root = doc.DocumentElement;
             doc.InsertBefore(xmlDeclaration, root);
@@ -120,8 +119,7 @@ namespace CipherApp.Controllers
             doc.AppendChild(exercitii);
             foreach(var item in Constants.exercitiiSel)
             {
-                
-                
+
                 XmlElement Cifru = doc.CreateElement(string.Empty, "Cifru", string.Empty);
                 XmlText cifruText = doc.CreateTextNode(item.Cifru);
                 Cifru.AppendChild(cifruText);
@@ -141,8 +139,6 @@ namespace CipherApp.Controllers
                 XmlText raspunstText = doc.CreateTextNode(item.TextCriptat);
                 Raspuns.AppendChild(raspunstText);
                 exercitii.AppendChild(Raspuns);
-
-        
 
             }
             doc.Save("D:\\document.xml");

@@ -52,4 +52,3 @@ D:\UTCN Cluj Related\Licenta\CipherApp\CipherApp\bin\Microsoft.Owin.Security.Twi
 D:\UTCN Cluj Related\Licenta\CipherApp\CipherApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\UTCN Cluj Related\Licenta\CipherApp\CipherApp\obj\Debug\CipherApp.dll
 D:\UTCN Cluj Related\Licenta\CipherApp\CipherApp\obj\Debug\CipherApp.pdb
-D:\UTCN Cluj Related\Licenta\CipherApp\CipherApp\obj\Debug\CipherApp.csprojResolveAssemblyReference.cache

@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\logoC.png" />
     <Content Include="Assets\pozaMareFundal.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -199,6 +200,7 @@
     <Content Include="GIF\CFB.gif" />
     <Content Include="GIF\CTR.gif" />
     <Content Include="GIF\ECB.gif" />
+    <Content Include="Assets\logo.bmp" />
     <Content Include="GIF\OFB.gif" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -208,6 +210,8 @@
     <Content Include="MyScript\Exercise.js" />
     <Content Include="MyScript\Layout.js" />
     <Content Include="MyScript\PerCathegory.js" />
+    <Content Include="MyScript\Settings.js" />
+    <Content Include="pinguin.jpg" />
     <Content Include="Styles\Cont.css" />
     <Content Include="Styles\Exercise.css" />
     <Content Include="Styles\PerCathegories.css" />
@@ -228,6 +232,7 @@
     <Content Include="Styles\Cipher.css" />
     <Content Include="Styles\Layout.css" />
     <Content Include="Styles\OneCipher.css" />
+    <Content Include="Styles\Settings.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -29,7 +29,11 @@ namespace CipherApp.DataLayer.TableModule
                         if (reader.HasRows)
                         {
                             while (reader.Read())
+                            {
                                 Constants.isProfLogged = (bool)reader["IsProf"];
+                                Constants.mail = reader["Email"].ToString();
+                                Constants.pass = reader["Password"].ToString();
+                            }
                             if (Constants.isProfLogged == null)
                                 Constants.isProfLogged = false;
                             return true;
@@ -111,5 +115,35 @@ namespace CipherApp.DataLayer.TableModule
                 return false;
             }
         }
+
+        public void Update(string mail, string tableColumn)
+        {
+            ConnectDB conDB = new ConnectDB();
+            string query = "Update users set "+ tableColumn + " =@mail where username = @name";
+            SqlConnection connection = conDB.connection;
+            try
+            {
+                connection.Open();
+                using (var comm = new SqlCommand(query, connection))
+                {
+                    comm.Parameters.AddWithValue("@name", Constants.name);
+                    comm.Parameters.AddWithValue("@mail", mail);
+
+                    comm.ExecuteNonQuery();
+
+                }
+            }
+            catch (SqlException e)
+            {
+                string msg = e.Message;
+
+            }
+            
+        }
+        public void updatePass(string pass)
+        {
+
+        }
     }
+
 }

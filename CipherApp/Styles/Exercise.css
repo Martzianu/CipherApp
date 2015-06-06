@@ -32,6 +32,9 @@
     border-radius: 19px;
       left: 31%;
 }
+.selected{
+    background-color:green;
+}
 
 .cifru{
     font-size:30px;
