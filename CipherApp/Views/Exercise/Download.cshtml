@@ -7,43 +7,39 @@
     <script src="~/MyScript/Exercise.js"></script>
 </head>
 
-
-@using (Html.BeginForm("Save", "Exercise", FormMethod.Post))
-{
-
 <div class="exercices">
-    @foreach (var ex in Model)
+    @using (Html.BeginForm("Save", "Exercise", FormMethod.Post))
     {
-        @if(Constants.exercitiiSel.Contains(ex))
-        {<div class="exercisePlaceholder onHover selected">}
-            else
-            {<div class="exercisePlaceholder onHover">}
+        foreach (var ex in Model)
+        {
+            <div class="exercisePlaceholder onHover">
 
                 <label for="cifru">Cifru: </label>
-                <div name="cifru" class="cifru wrap" value=@ex.Cifru>@ex.Cifru</div>
-                <input name="cifru" class="cifru wrap invisible" value=@ex.Cifru></input>
+                <div class="cifru wrap" >@ex.Cifru</div>
+                <input class="cifru wrap invisible" name="cifru" value=@ex.Cifru></input>
                 <br />
                 <label for="cerinta">Enunt: </label>
-                <div name="cerinta" class="cerinta wrap" value=@ex.Enunt>@ex.Enunt</div>
-                <input name="cerinta" class="cerinta wrap invisible" value=@ex.Enunt></input>
+                <div class="cerinta wrap" >@ex.Enunt</div>
+                <input class="cerinta wrap invisible" name="cerinta" value=@ex.Enunt></input>
                 <br />
                 <label for="detalii">Detalii: </label>
-                <div name="detalii" class="detalii wrap" value=@ex.Detalii>@ex.Detalii</div>
-                <input name="detalii" class="detalii wrap invisible" value=@ex.Detalii></input>
+                <div class="detalii wrap">@ex.Detalii</div>
+                <input class="detalii wrap invisible" name="detalii" value=@ex.Detalii></input>
                 <br />
                 <label for="text">Text: </label>
-                <div name="text" class="text wrap" value=@ex.TextNormal>@ex.TextNormal</div>
-                <input name="text" class="text wrap invisible" value=@ex.TextNormal></input>
+                <div class="text wrap">@ex.TextNormal</div>
+                <input class="text wrap invisible" name="text" value=@ex.TextNormal></input>
                 <br />
-                <label for="text">Raspuns: </label>
-                <div name="raspuns" class="text wrap raspunsVisibil">@ex.TextCriptat</div>
-                <input name="raspuns" class="text wrap invisible"></input>
+                <label for="raspuns">Raspuns: </label>
+                <div class="text wrap raspunsVisibil">@ex.TextCriptat</div>
+                <input class="text wrap invisible" name="raspuns"></input>
                 <br />
                 <button>Save</button>
             </div>
+        }
+
     }
 </div>
-}
 @using (Html.BeginForm("Download", "Exercise", FormMethod.Post))
 {
     <button class="downloadButton">Download</button>

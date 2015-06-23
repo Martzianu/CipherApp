@@ -33,7 +33,7 @@ namespace CipherApp.Controllers
             return ciphernameList;
         }
         [HttpPost]
-        public ActionResult AddExercise(string cipher, string cerinta, string detalii, bool privat, string text, bool obligatoriu, bool profPrivat)
+        public ActionResult AddExercise(string cipher, string cerinta, string detalii, bool privat, string text,string raspuns, bool obligatoriu, bool profPrivat)
         {
 
             Exercise ex = new Exercise();
@@ -43,6 +43,7 @@ namespace CipherApp.Controllers
             ex.Enunt = cerinta;
             ex.Privat = privat;
             ex.TextNormal = text;
+            ex.TextCriptat = raspuns;
             ex.Obligatoriu = obligatoriu;
             if (profPrivat == true)
                 ex.Prof = Constants.name;
@@ -86,6 +87,7 @@ namespace CipherApp.Controllers
            
             return View(lists);
         }
+
         public ActionResult Download()
         {
             List<Exercise> ExList = new List<Exercise>();

@@ -140,6 +140,7 @@ namespace CipherApp.DataLayer.TableModule
             }
             
         }
+      
         public void updatePass(string pass)
         {
 

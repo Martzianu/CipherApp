@@ -14,6 +14,8 @@ namespace CipherApp.Controllers
 
         public ActionResult All()
         {
+            ExerciseHandler handler = new ExerciseHandler();
+            Constants.thereIsHomework = handler.CheckIfHomework();
             List<Cipher> partialTable = new List<Cipher>();
             GetAllCiphers();
             partialTable.Add(table.getTable().ElementAt(table.getTable().Count-1));

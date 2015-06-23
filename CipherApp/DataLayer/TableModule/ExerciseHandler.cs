@@ -46,6 +46,30 @@ namespace CipherApp.DataLayer.TableModule
             }
         }
 
+        public bool CheckIfHomework()
+        {
+            ConnectDB conDB = new ConnectDB();
+            string query = "Select * from dbo.Exercitii where Obligatoriu = @obl";
+            SqlConnection connection = conDB.connection;
+            try
+            {
+                connection.Open();
+                using (var comm = new SqlCommand(query, connection))
+                {
+                    comm.Parameters.AddWithValue("@obl", 0);
+                    var reader = comm.ExecuteReader();
+                    if (reader.HasRows)
+                        return true;
+                    else return false;
+                }
+            }
+            catch (SqlException e)
+            {
+                string msg = e.Message;
+                return false;
+            }
+        }
+
         public bool AddExercise(Exercise ex)
         {
             ConnectDB conDB = new ConnectDB();

@@ -246,6 +246,9 @@ label{
 .freqBar{
 
 }
+.greenColor {
+    background-color:lightgreen;
+}
 .raspunsVisibil {
     display: block;
     left: 124px;
@@ -256,9 +259,9 @@ label{
     cursor:pointer;
 }
 .downloadButton {
-    width: 300px;
-    height: 40px;
-    position: relative;
-    float: left;
-    left: 40%;
+  width: 152px;
+  height: 40px;
+  position: relative;
+  float: left;
+  left: 4%;
 }

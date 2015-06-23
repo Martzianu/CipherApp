@@ -23,7 +23,7 @@
         {
             <div class="freqBar">
             <span>@Model.AlphabetFrequency[item]</span>
-            <div style="width:@( 20+(int)Model.AlphabetFrequency[item]).@((Model.AlphabetFrequency[item] - (int)Model.AlphabetFrequency[item]).ToString().Substring(2,2))%" class="bar"> @Model.Alphabet[item]</div>
+                <div style="width:@( 20+(int)Model.AlphabetFrequency[item]).@((Model.AlphabetFrequency[item] - (int)Model.AlphabetFrequency[item]).ToString().Substring(2,2))%" class="bar greenColor"> @Model.Alphabet[item]</div>
             <br />
             </div>
         }

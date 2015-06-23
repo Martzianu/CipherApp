@@ -19,10 +19,12 @@ namespace CipherApp.Controllers
         public ActionResult Index()
         {
             //GenerateFilesForBlockCiphers();
+            ExerciseHandler handler = new ExerciseHandler();
+            Constants.thereIsHomework = handler.CheckIfHomework();
             return View();
 
         }
-
+        #region 
         private void GenerateFilesForBlockCiphers(){
             var keys = MakeKey();// keya ce o vom folosi la xor-ing
             MemoryStream ms = new MemoryStream();
@@ -122,6 +124,7 @@ namespace CipherApp.Controllers
                
             
         }
+        #endregion 
         [HttpPost]   
         public ActionResult Index(string _username,string _password)
         {
